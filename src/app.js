@@ -12,6 +12,8 @@ app.get('/health', (req, res) => {
 });
 
 app.use('/api/auth', require('./routes/authRoutes'));
+app.use('/api/categories', require('./routes/categoryRoutes'));
+app.use('/api/products', require('./routes/productRoutes'));
 
 app.use(require('./middlewares/errorHandler'));
 
