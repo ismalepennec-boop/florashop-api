@@ -11,4 +11,6 @@ app.get('/health', (req, res) => {
   res.json({ status: 'ok', timestamp: new Date().toISOString() });
 });
 
+app.use(require('./middlewares/errorHandler'));
+
 module.exports = app;
