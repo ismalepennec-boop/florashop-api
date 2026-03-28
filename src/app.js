@@ -11,6 +11,8 @@ app.get('/health', (req, res) => {
   res.json({ status: 'ok', timestamp: new Date().toISOString() });
 });
 
+app.use('/api/auth', require('./routes/authRoutes'));
+
 app.use(require('./middlewares/errorHandler'));
 
 module.exports = app;
